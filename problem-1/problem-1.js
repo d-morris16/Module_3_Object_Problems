@@ -15,10 +15,10 @@ const vehicle = {
   color: "Blue"
 };
 
-function propertyRemover(object, propery){
-  delete object.property;
+function propertyRemover(object, property){
+  delete object[property];
   
-  return "this car is " + object.property;
+  return object;
 }
 
-console.log(propertyRemover(vehicle, vehicle.year));
+console.log(propertyRemover(vehicle, "year"));
