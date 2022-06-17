@@ -34,8 +34,6 @@ const arrayOfPeople = [person1, person2, person3];
 
 function nameIdentifier(array) {
   for (let i = 0; i < array.length; i++){
-     return "First Name: " + array.firstName + " Last Name: " + array.lastName; 
+     console.log("First Name: " + array[i].firstName + " Last Name: " + array[i].lastName); 
   }
 }
-
-console.log(nameIdentifier(arrayOfPeople));
