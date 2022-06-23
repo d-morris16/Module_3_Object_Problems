@@ -3,23 +3,27 @@
 //of the object.
 
 /*
-Step 1: Create an object map with three items in it.   
-Step 2: Create a function that takes in the object map as a parameter. 
-Step 3: Within the function use the size method to return the number of map elements
-in the object. 
+Step 1: Create an object with three items in it.   
+Step 2: Create a function that takes in the object as a parameter. 
+Step 3: Within the function use the .length method and print out the number of items
+the passed in object has
 */
 
 
-const person = new Map([
-  ["firstName", "Dominique"],
-  ["lastName", "Morris"],
-  ["age", 26]
-]);
+const myCar = {
+  brand: "Subaru", 
+  model: "WRX", 
+  year: 2017
+};
 
 function objectLengthChecker(object) {
-  let text = "The number length of this object is " + object.size;
+// Object.keys(object) returns enumerable properties as an array. Now being an array, 
+//the .length will return the number of elements in the object. 
+
+  let text = "The size of this object is " + Object.keys(object).length;  
   
-  return text;
+  return text; 
 }
 
-console.log(objectLengthChecker(person));
+console.log(objectLengthChecker(myCar));
+
